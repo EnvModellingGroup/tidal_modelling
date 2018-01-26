@@ -1,4 +1,13 @@
 #!/usr/bin/env python
+
+# Tidal analysis script (c) by Jon Hill, University of York, 2017, 2018
+#
+# This work is licensed under a
+# Creative Commons Attribution 4.0 International License.
+#
+# You should have received a copy of the license along with this
+# work. If not, see <http://creativecommons.org/licenses/by/4.0/>.
+#
 import vtktools
 import vtk
 import datetime
@@ -16,6 +25,7 @@ import os
 import GFD_basisChange_tools as sp
 import zipfile
 
+# Tidal data from
 #
 # Caldwell, P. C., M. A. Merrifield, P. R. Thompson (2015), 
 # Sea level measured by tide gauges from global oceans - the 
@@ -26,6 +36,10 @@ import zipfile
 # Assumes the PVTU is on the sphere. Will not work with UTM-type projections, hence SW tides
 
 startdate = datetime.datetime(1700, 1, 1, 0, 0)
+
+# Note some functions are not yet implemented. Mainly written for Collins et al, Sedimentology, 2018.
+#
+# Note: Add full ref when available
 
 def main():
 
